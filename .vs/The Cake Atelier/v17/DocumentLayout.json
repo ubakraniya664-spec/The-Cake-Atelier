@@ -1,0 +1,513 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{13967A91-1524-4222-A232-31F07F4CA475}|The Cake Atelier.csproj|C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\admin\\view_users.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{13967A91-1524-4222-A232-31F07F4CA475}|The Cake Atelier.csproj|solutionrelative:admin\\view_users.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13967A91-1524-4222-A232-31F07F4CA475}|The Cake Atelier.csproj|C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\default.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{13967A91-1524-4222-A232-31F07F4CA475}|The Cake Atelier.csproj|solutionrelative:default.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13967A91-1524-4222-A232-31F07F4CA475}|The Cake Atelier.csproj|C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{13967A91-1524-4222-A232-31F07F4CA475}|The Cake Atelier.csproj|solutionrelative:default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13967A91-1524-4222-A232-31F07F4CA475}|The Cake Atelier.csproj|C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{13967A91-1524-4222-A232-31F07F4CA475}|The Cake Atelier.csproj|solutionrelative:web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13967A91-1524-4222-A232-31F07F4CA475}|The Cake Atelier.csproj|C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\admin\\manage_cakes.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{13967A91-1524-4222-A232-31F07F4CA475}|The Cake Atelier.csproj|solutionrelative:admin\\manage_cakes.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13967A91-1524-4222-A232-31F07F4CA475}|The Cake Atelier.csproj|C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\user_dashboard.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{13967A91-1524-4222-A232-31F07F4CA475}|The Cake Atelier.csproj|solutionrelative:user_dashboard.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13967A91-1524-4222-A232-31F07F4CA475}|The Cake Atelier.csproj|C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\register.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{13967A91-1524-4222-A232-31F07F4CA475}|The Cake Atelier.csproj|solutionrelative:register.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13967A91-1524-4222-A232-31F07F4CA475}|The Cake Atelier.csproj|C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\admin\\manage_cakes.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{13967A91-1524-4222-A232-31F07F4CA475}|The Cake Atelier.csproj|solutionrelative:admin\\manage_cakes.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13967A91-1524-4222-A232-31F07F4CA475}|The Cake Atelier.csproj|C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\admin\\dashboard.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{13967A91-1524-4222-A232-31F07F4CA475}|The Cake Atelier.csproj|solutionrelative:admin\\dashboard.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13967A91-1524-4222-A232-31F07F4CA475}|The Cake Atelier.csproj|C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{13967A91-1524-4222-A232-31F07F4CA475}|The Cake Atelier.csproj|solutionrelative:style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13967A91-1524-4222-A232-31F07F4CA475}|The Cake Atelier.csproj|C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\admin\\view_users.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{13967A91-1524-4222-A232-31F07F4CA475}|The Cake Atelier.csproj|solutionrelative:admin\\view_users.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13967A91-1524-4222-A232-31F07F4CA475}|The Cake Atelier.csproj|C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\admin\\dashboard.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{13967A91-1524-4222-A232-31F07F4CA475}|The Cake Atelier.csproj|solutionrelative:admin\\dashboard.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13967A91-1524-4222-A232-31F07F4CA475}|The Cake Atelier.csproj|C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\admin\\add_cake.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{13967A91-1524-4222-A232-31F07F4CA475}|The Cake Atelier.csproj|solutionrelative:admin\\add_cake.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13967A91-1524-4222-A232-31F07F4CA475}|The Cake Atelier.csproj|C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\admin\\add_cake.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{13967A91-1524-4222-A232-31F07F4CA475}|The Cake Atelier.csproj|solutionrelative:admin\\add_cake.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13967A91-1524-4222-A232-31F07F4CA475}|The Cake Atelier.csproj|C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\about.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{13967A91-1524-4222-A232-31F07F4CA475}|The Cake Atelier.csproj|solutionrelative:about.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13967A91-1524-4222-A232-31F07F4CA475}|The Cake Atelier.csproj|C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\admin\\admin_login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{13967A91-1524-4222-A232-31F07F4CA475}|The Cake Atelier.csproj|solutionrelative:admin\\admin_login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13967A91-1524-4222-A232-31F07F4CA475}|The Cake Atelier.csproj|C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\admin\\admin_login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{13967A91-1524-4222-A232-31F07F4CA475}|The Cake Atelier.csproj|solutionrelative:admin\\admin_login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13967A91-1524-4222-A232-31F07F4CA475}|The Cake Atelier.csproj|C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\admin\\admin_register.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{13967A91-1524-4222-A232-31F07F4CA475}|The Cake Atelier.csproj|solutionrelative:admin\\admin_register.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13967A91-1524-4222-A232-31F07F4CA475}|The Cake Atelier.csproj|C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\admin\\admin_register.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{13967A91-1524-4222-A232-31F07F4CA475}|The Cake Atelier.csproj|solutionrelative:admin\\admin_register.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13967A91-1524-4222-A232-31F07F4CA475}|The Cake Atelier.csproj|C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\register.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{13967A91-1524-4222-A232-31F07F4CA475}|The Cake Atelier.csproj|solutionrelative:register.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13967A91-1524-4222-A232-31F07F4CA475}|The Cake Atelier.csproj|C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{13967A91-1524-4222-A232-31F07F4CA475}|The Cake Atelier.csproj|solutionrelative:login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13967A91-1524-4222-A232-31F07F4CA475}|The Cake Atelier.csproj|C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{13967A91-1524-4222-A232-31F07F4CA475}|The Cake Atelier.csproj|solutionrelative:login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13967A91-1524-4222-A232-31F07F4CA475}|The Cake Atelier.csproj|C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\contact.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{13967A91-1524-4222-A232-31F07F4CA475}|The Cake Atelier.csproj|solutionrelative:contact.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13967A91-1524-4222-A232-31F07F4CA475}|The Cake Atelier.csproj|C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\cart.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{13967A91-1524-4222-A232-31F07F4CA475}|The Cake Atelier.csproj|solutionrelative:cart.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13967A91-1524-4222-A232-31F07F4CA475}|The Cake Atelier.csproj|C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\cakes.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{13967A91-1524-4222-A232-31F07F4CA475}|The Cake Atelier.csproj|solutionrelative:cakes.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13967A91-1524-4222-A232-31F07F4CA475}|The Cake Atelier.csproj|C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\about.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{13967A91-1524-4222-A232-31F07F4CA475}|The Cake Atelier.csproj|solutionrelative:about.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13967A91-1524-4222-A232-31F07F4CA475}|The Cake Atelier.csproj|C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\cart.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{13967A91-1524-4222-A232-31F07F4CA475}|The Cake Atelier.csproj|solutionrelative:cart.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13967A91-1524-4222-A232-31F07F4CA475}|The Cake Atelier.csproj|C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\cakes.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{13967A91-1524-4222-A232-31F07F4CA475}|The Cake Atelier.csproj|solutionrelative:cakes.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13967A91-1524-4222-A232-31F07F4CA475}|The Cake Atelier.csproj|C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\contact.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{13967A91-1524-4222-A232-31F07F4CA475}|The Cake Atelier.csproj|solutionrelative:contact.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "View_Users.aspx",
+              "DocumentMoniker": "C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\Admin\\View_Users.aspx",
+              "RelativeDocumentMoniker": "Admin\\View_Users.aspx",
+              "ToolTip": "C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\Admin\\View_Users.aspx",
+              "RelativeToolTip": "Admin\\View_Users.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-10-05T07:47:54.002Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Manage_Cakes.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\Admin\\Manage_Cakes.aspx.cs",
+              "RelativeDocumentMoniker": "Admin\\Manage_Cakes.aspx.cs",
+              "ToolTip": "C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\Admin\\Manage_Cakes.aspx.cs",
+              "RelativeToolTip": "Admin\\Manage_Cakes.aspx.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAwwEgAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-05T07:18:59.65Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\Web.config",
+              "RelativeDocumentMoniker": "Web.config",
+              "ToolTip": "C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\Web.config",
+              "RelativeToolTip": "Web.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAB3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2026-10-04T12:54:09.115Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Default.aspx",
+              "DocumentMoniker": "C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\Default.aspx",
+              "RelativeDocumentMoniker": "Default.aspx",
+              "ToolTip": "C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\Default.aspx",
+              "RelativeToolTip": "Default.aspx",
+              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-10-04T11:11:18.572Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Default.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\Default.aspx.cs",
+              "RelativeDocumentMoniker": "Default.aspx.cs",
+              "ToolTip": "C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\Default.aspx.cs",
+              "RelativeToolTip": "Default.aspx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-04T11:12:04.734Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "View_Users.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\Admin\\View_Users.aspx.cs",
+              "RelativeDocumentMoniker": "Admin\\View_Users.aspx.cs",
+              "ToolTip": "C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\Admin\\View_Users.aspx.cs",
+              "RelativeToolTip": "Admin\\View_Users.aspx.cs",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAqwFIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-05T07:48:05.83Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Style.css",
+              "DocumentMoniker": "C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\Style.css",
+              "RelativeDocumentMoniker": "Style.css",
+              "ToolTip": "C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\Style.css",
+              "RelativeToolTip": "Style.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoEAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-10-05T18:05:37.35Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "User_Dashboard.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\User_Dashboard.aspx.cs",
+              "RelativeDocumentMoniker": "User_Dashboard.aspx.cs",
+              "ToolTip": "C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\User_Dashboard.aspx.cs",
+              "RelativeToolTip": "User_Dashboard.aspx.cs",
+              "ViewState": "AgIAAHoAAAAAAAAAAAAswPgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-05T18:50:31.644Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Manage_Cakes.aspx",
+              "DocumentMoniker": "C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\Admin\\Manage_Cakes.aspx",
+              "RelativeDocumentMoniker": "Admin\\Manage_Cakes.aspx",
+              "ToolTip": "C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\Admin\\Manage_Cakes.aspx",
+              "RelativeToolTip": "Admin\\Manage_Cakes.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-10-05T07:14:31.325Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Add_Cake.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\Admin\\Add_Cake.aspx.cs",
+              "RelativeDocumentMoniker": "Admin\\Add_Cake.aspx.cs",
+              "ToolTip": "C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\Admin\\Add_Cake.aspx.cs",
+              "RelativeToolTip": "Admin\\Add_Cake.aspx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-05T06:28:11.116Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Add_Cake.aspx",
+              "DocumentMoniker": "C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\Admin\\Add_Cake.aspx",
+              "RelativeDocumentMoniker": "Admin\\Add_Cake.aspx",
+              "ToolTip": "C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\Admin\\Add_Cake.aspx",
+              "RelativeToolTip": "Admin\\Add_Cake.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-10-05T06:27:45.36Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Admin_Register.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\Admin\\Admin_Register.aspx.cs",
+              "RelativeDocumentMoniker": "Admin\\Admin_Register.aspx.cs",
+              "ToolTip": "C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\Admin\\Admin_Register.aspx.cs",
+              "RelativeToolTip": "Admin\\Admin_Register.aspx.cs",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAcwGMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-05T05:54:53.858Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Admin_Register.aspx",
+              "DocumentMoniker": "C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\Admin\\Admin_Register.aspx",
+              "RelativeDocumentMoniker": "Admin\\Admin_Register.aspx",
+              "ToolTip": "C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\Admin\\Admin_Register.aspx",
+              "RelativeToolTip": "Admin\\Admin_Register.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-10-05T05:54:39.227Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Dashboard.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\Admin\\Dashboard.aspx.cs",
+              "RelativeDocumentMoniker": "Admin\\Dashboard.aspx.cs",
+              "ToolTip": "C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\Admin\\Dashboard.aspx.cs",
+              "RelativeToolTip": "Admin\\Dashboard.aspx.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-05T05:51:29.768Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Dashboard.aspx",
+              "DocumentMoniker": "C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\Admin\\Dashboard.aspx",
+              "RelativeDocumentMoniker": "Admin\\Dashboard.aspx",
+              "ToolTip": "C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\Admin\\Dashboard.aspx",
+              "RelativeToolTip": "Admin\\Dashboard.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-10-04T13:41:30.112Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Admin_Login.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\Admin\\Admin_Login.aspx.cs",
+              "RelativeDocumentMoniker": "Admin\\Admin_Login.aspx.cs",
+              "ToolTip": "C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\Admin\\Admin_Login.aspx.cs",
+              "RelativeToolTip": "Admin\\Admin_Login.aspx.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAhwCgAAACJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-05T05:48:33.114Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Admin_Login.aspx",
+              "DocumentMoniker": "C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\Admin\\Admin_Login.aspx",
+              "RelativeDocumentMoniker": "Admin\\Admin_Login.aspx",
+              "ToolTip": "C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\Admin\\Admin_Login.aspx",
+              "RelativeToolTip": "Admin\\Admin_Login.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-10-04T13:41:14.064Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Contact.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\Contact.aspx.cs",
+              "RelativeDocumentMoniker": "Contact.aspx.cs",
+              "ToolTip": "C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\Contact.aspx.cs",
+              "RelativeToolTip": "Contact.aspx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-04T12:38:59.754Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Contact.aspx",
+              "DocumentMoniker": "C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\Contact.aspx",
+              "RelativeDocumentMoniker": "Contact.aspx",
+              "ToolTip": "C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\Contact.aspx",
+              "RelativeToolTip": "Contact.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-10-04T12:38:24.988Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "About.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\About.aspx.cs",
+              "RelativeDocumentMoniker": "About.aspx.cs",
+              "ToolTip": "C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\About.aspx.cs",
+              "RelativeToolTip": "About.aspx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-04T12:35:44.932Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "About.aspx",
+              "DocumentMoniker": "C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\About.aspx",
+              "RelativeDocumentMoniker": "About.aspx",
+              "ToolTip": "C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\About.aspx",
+              "RelativeToolTip": "About.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-10-04T12:35:28.841Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Cart.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\Cart.aspx.cs",
+              "RelativeDocumentMoniker": "Cart.aspx.cs",
+              "ToolTip": "C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\Cart.aspx.cs",
+              "RelativeToolTip": "Cart.aspx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-04T12:27:05.147Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Cart.aspx",
+              "DocumentMoniker": "C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\Cart.aspx",
+              "RelativeDocumentMoniker": "Cart.aspx",
+              "ToolTip": "C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\Cart.aspx",
+              "RelativeToolTip": "Cart.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-10-04T12:26:53.033Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Login.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\Login.aspx.cs",
+              "RelativeDocumentMoniker": "Login.aspx.cs",
+              "ToolTip": "C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\Login.aspx.cs",
+              "RelativeToolTip": "Login.aspx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-04T12:11:30.727Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Login.aspx",
+              "DocumentMoniker": "C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\Login.aspx",
+              "RelativeDocumentMoniker": "Login.aspx",
+              "ToolTip": "C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\Login.aspx",
+              "RelativeToolTip": "Login.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-10-04T12:11:08.699Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Register.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\Register.aspx.cs",
+              "RelativeDocumentMoniker": "Register.aspx.cs",
+              "ToolTip": "C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\Register.aspx.cs",
+              "RelativeToolTip": "Register.aspx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-04T12:09:39.377Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Register.aspx",
+              "DocumentMoniker": "C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\Register.aspx",
+              "RelativeDocumentMoniker": "Register.aspx",
+              "ToolTip": "C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\Register.aspx",
+              "RelativeToolTip": "Register.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-10-04T12:09:29.987Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Cakes.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\Cakes.aspx.cs",
+              "RelativeDocumentMoniker": "Cakes.aspx.cs",
+              "ToolTip": "C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\Cakes.aspx.cs",
+              "RelativeToolTip": "Cakes.aspx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-04T11:47:10.873Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Cakes.aspx",
+              "DocumentMoniker": "C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\Cakes.aspx",
+              "RelativeDocumentMoniker": "Cakes.aspx",
+              "ToolTip": "C:\\Users\\Umang\\OneDrive\\Documents\\ASP .NET\\PROJECT\\The Cake Atelier\\Cakes.aspx",
+              "RelativeToolTip": "Cakes.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-10-04T11:46:14.679Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1034 @@
+/* ==========================================================================
+   THE CAKE ATELIER - UNIVERSAL STYLESHEET
+   Palette:
+   - Primary Dark (Chocolate): #4a2c1b / #2b1810 / #361e11
+   - Primary Accent (Berry/Coral): #c45b4c / #a83d30
+   - Accent Warm (Caramel/Gold): #d4a373 / #ffb703
+   - Background Light (Cream): #fdfaf6 / #faf4ef
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. GLOBAL RESET & BASE TYPOGRAPHY
+   -------------------------------------------------------------------------- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fdfaf6;
+    color: #3b2219;
+}
+
+body.admin-auth-body {
+    background-color: #2b1810;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* --------------------------------------------------------------------------
+   2. CUSTOMER STICKY NAVIGATION HEADER
+   -------------------------------------------------------------------------- */
+.header-bar {
+    background-color: #4a2c1b;
+    padding: 14px 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.18);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.top-ribbon {
+    background-color: #321c11;
+    color: #fcece3;
+    font-size: 13px;
+    padding: 8px 20px;
+    text-align: center;
+}
+
+.nav-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.brand-title {
+    color: #ffffff;
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.brand-subtitle {
+    color: #d4a373;
+    font-size: 12px;
+    display: block;
+    margin-top: 2px;
+}
+
+.nav-links {
+    text-align: right;
+    vertical-align: middle;
+}
+
+.nav-links a, 
+.nav-links .asp-nav-btn {
+    color: #fdfaf6;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 12px;
+    padding: 7px 14px;
+    border-radius: 4px;
+    display: inline-block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.nav-links a:hover, 
+.nav-links a.active,
+.nav-links .asp-nav-btn:hover {
+    background-color: #c45b4c;
+    color: #ffffff;
+}
+
+.user-greeting {
+    color: #ffb703;
+    font-weight: bold;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+/* --------------------------------------------------------------------------
+   3. ADMIN NAVIGATION HEADER & BADGES
+   -------------------------------------------------------------------------- */
+.admin-header {
+    background-color: #2b1810;
+    padding: 14px 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.brand-badge {
+    background-color: #c45b4c;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 2px 8px;
+    border-radius: 3px;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+.admin-nav-links {
+    text-align: right;
+    vertical-align: middle;
+}
+
+.admin-nav-links a,
+.admin-nav-links .asp-btn {
+    color: #f5ebe6;
+    text-decoration: none;
+    font-size: 14px;
+    margin-left: 14px;
+    padding: 6px 12px;
+    border-radius: 4px;
+    display: inline-block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.admin-nav-links a:hover,
+.admin-nav-links a.active,
+.admin-nav-links .asp-btn:hover {
+    background-color: #c45b4c;
+    color: #ffffff;
+}
+
+/* --------------------------------------------------------------------------
+   4. LAYOUT CONTAINERS & HEADINGS
+   -------------------------------------------------------------------------- */
+.main-container,
+.container {
+    max-width: 1140px;
+    margin: 35px auto;
+    padding: 0 20px;
+}
+
+.section-heading {
+    text-align: center;
+    color: #4a2c1b;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 5px;
+}
+
+.section-subheading {
+    text-align: center;
+    color: #7d5e4b;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.page-title {
+    color: #4a2c1b;
+    font-size: 26px;
+    font-weight: bold;
+    margin: 0 0 5px 0;
+}
+
+.page-subtitle {
+    color: #7d5e4b;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.page-header-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+/* --------------------------------------------------------------------------
+   5. BUTTONS & ACTIONS
+   -------------------------------------------------------------------------- */
+.btn-primary {
+    background-color: #c45b4c;
+    color: #ffffff;
+    padding: 12px 26px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    background-color: #aa4233;
+}
+
+.btn-secondary {
+    background-color: #d4a373;
+    color: #3b2219;
+    padding: 12px 26px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-secondary:hover {
+    background-color: #be8e5f;
+    color: #ffffff;
+}
+
+.btn-submit,
+.btn-login,
+.btn-register,
+.btn-confirm {
+    background-color: #c45b4c;
+    color: #ffffff;
+    border: none;
+    padding: 11px 26px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-submit:hover,
+.btn-login:hover,
+.btn-register:hover,
+.btn-confirm:hover {
+    background-color: #a83d30;
+}
+
+.btn-reset,
+.btn-cancel {
+    background-color: #7d5e4b;
+    color: #ffffff;
+    border: none;
+    padding: 11px 22px;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-reset:hover,
+.btn-cancel:hover {
+    background-color: #614636;
+}
+
+.btn-order {
+    background-color: #4a2c1b;
+    color: #ffffff;
+    padding: 9px 20px;
+    font-size: 13px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn-order:hover {
+    background-color: #c45b4c;
+}
+
+/* --------------------------------------------------------------------------
+   6. FORM CONTROLS & CARDS (Login, Register, Add Cake, Contact)
+   -------------------------------------------------------------------------- */
+.form-input,
+.txt-input {
+    width: 100%;
+    padding: 9px 12px;
+    border: 1px solid #d4c3b7;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.form-dropdown {
+    width: 100%;
+    padding: 9px 12px;
+    border: 1px solid #d4c3b7;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.form-table,
+.reg-table,
+.login-table,
+.checkout-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.form-table td,
+.reg-table td,
+.login-table td,
+.checkout-table td {
+    padding: 8px 6px;
+}
+
+.form-label {
+    font-weight: bold;
+    color: #4a2c1b;
+    font-size: 13px;
+    display: block;
+    margin-bottom: 3px;
+}
+
+/* Auth Cards */
+.reg-card,
+.login-card {
+    background-color: #ffffff;
+    border: 1px solid #ebdcd3;
+    border-radius: 12px;
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 35px 30px;
+    box-shadow: 0 4px 18px rgba(74, 44, 27, 0.08);
+}
+
+.reg-box,
+.login-box {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.35);
+    width: 440px;
+    padding: 35px 30px;
+    text-align: center;
+    border-top: 5px solid #c45b4c;
+    margin: 25px auto;
+}
+
+.portal-icon {
+    font-size: 38px;
+    margin-bottom: 6px;
+}
+
+.portal-title {
+    color: #4a2c1b;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 0 4px 0;
+}
+
+.portal-subtitle {
+    color: #7d5e4b;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.link-row {
+    margin-top: 18px;
+    font-size: 13px;
+    color: #7d5e4b;
+}
+
+.link-row a {
+    color: #c45b4c;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.link-row a:hover {
+    text-decoration: underline;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: #8c7365;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.login-box .btn-login,
+.reg-box .btn-register {
+    width: 100%;
+    margin-top: 15px;
+}
+
+/* --------------------------------------------------------------------------
+   7. CARDS & DATALIST DISPLAY (Featured Cakes, Catalog, Reviews, Cart)
+   -------------------------------------------------------------------------- */
+.cake-card {
+    background-color: #ffffff;
+    border: 1px solid #ebdcd3;
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+    box-shadow: 0 4px 14px rgba(74, 44, 27, 0.08);
+    margin: 10px;
+    width: 320px;
+    box-sizing: border-box;
+}
+
+.cake-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.cake-title {
+    font-size: 17px;
+    font-weight: bold;
+    color: #4a2c1b;
+    margin-bottom: 6px;
+}
+
+.cake-desc {
+    font-size: 12px;
+    color: #6d5444;
+    height: 48px;
+    overflow: hidden;
+    line-height: 1.4;
+    margin-bottom: 8px;
+}
+
+.cake-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #c45b4c;
+    margin-bottom: 12px;
+}
+
+.cart-container {
+    max-width: 900px;
+    margin: 40px auto;
+    background-color: #ffffff;
+    border: 1px solid #ebdcd3;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 18px rgba(74, 44, 27, 0.08);
+}
+
+.cart-item-box {
+    background-color: #faf5f0;
+    border: 1px solid #ebdcd3;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.cart-item-img {
+    width: 110px;
+    height: 110px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 1px solid #ebdcd3;
+}
+
+.form-section-title {
+    color: #4a2c1b;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 25px 0 15px 0;
+    border-bottom: 1px solid #ebdcd3;
+    padding-bottom: 8px;
+}
+
+.order-success-box {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 8px;
+    padding: 25px;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.review-card {
+    background-color: #ffffff;
+    border: 1px solid #ebdcd3;
+    border-radius: 8px;
+    padding: 14px;
+    margin: 10px;
+    width: 320px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* Catalog Filter Bar */
+.filter-box {
+    background-color: #ffffff;
+    border: 1px solid #ebdcd3;
+    border-radius: 10px;
+    padding: 16px 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 3px 12px rgba(74, 44, 27, 0.05);
+}
+
+.filter-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.filter-table td {
+    padding: 6px 12px;
+    font-size: 14px;
+    color: #4a2c1b;
+}
+
+/* --------------------------------------------------------------------------
+   8. HERO, CATEGORIES & STEPS (Homepage)
+   -------------------------------------------------------------------------- */
+.hero-banner {
+    background: linear-gradient(135deg, #4a2c1b 0%, #2f190e 100%);
+    color: #ffffff;
+    text-align: center;
+    padding: 60px 20px;
+    border-bottom: 5px solid #c45b4c;
+}
+
+.hero-title {
+    font-size: 42px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 0;
+    color: #fcf1eb;
+}
+
+.hero-tagline {
+    color: #d4a373;
+    font-size: 18px;
+    margin-top: 8px;
+    letter-spacing: 1px;
+}
+
+.hero-text {
+    max-width: 720px;
+    margin: 15px auto 25px auto;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #e3d2c7;
+}
+
+.cat-table,
+.steps-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 16px;
+    margin: 20px 0 45px 0;
+}
+
+.cat-card,
+.step-card {
+    background-color: #ffffff;
+    border: 1px solid #ebdcd3;
+    border-radius: 10px;
+    padding: 22px;
+    text-align: center;
+    box-shadow: 0 3px 12px rgba(74, 44, 27, 0.06);
+    vertical-align: top;
+    width: 25%;
+}
+
+.cat-icon {
+    font-size: 34px;
+    margin-bottom: 8px;
+    display: inline-block;
+}
+
+.cat-title,
+.step-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #4a2c1b;
+    margin-bottom: 6px;
+}
+
+.cat-desc,
+.step-desc {
+    font-size: 12px;
+    color: #6d5444;
+    line-height: 1.5;
+}
+
+.step-num {
+    background-color: #c45b4c;
+    color: #ffffff;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    border-radius: 50%;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* --------------------------------------------------------------------------
+   9. ABOUT US & CONTACT LAYOUTS
+   -------------------------------------------------------------------------- */
+.about-story-text p {
+    color: #5c3d2e;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.about-img-box {
+    vertical-align: middle;
+    text-align: center;
+    width: 45%;
+}
+
+.about-img-box img {
+    width: 100%;
+    max-width: 440px;
+    height: auto;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(74, 44, 27, 0.15);
+    border: 4px solid #ffffff;
+}
+
+.values-table,
+.team-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 16px;
+    margin: 20px 0 45px 0;
+}
+
+.value-card {
+    background-color: #ffffff;
+    border: 1px solid #ebdcd3;
+    border-top: 4px solid #c45b4c;
+    border-radius: 10px;
+    padding: 22px;
+    width: 25%;
+    vertical-align: top;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.value-icon {
+    font-size: 32px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.value-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #4a2c1b;
+    margin-bottom: 8px;
+}
+
+.value-desc {
+    font-size: 13px;
+    color: #6d5444;
+    line-height: 1.6;
+}
+
+.team-card {
+    background-color: #ffffff;
+    border: 1px solid #ebdcd3;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 14px rgba(74, 44, 27, 0.07);
+    width: 33.33%;
+    vertical-align: top;
+}
+
+.team-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #4a2c1b;
+    margin-top: 10px;
+}
+
+.team-role {
+    font-size: 13px;
+    color: #c45b4c;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.team-bio {
+    font-size: 13px;
+    color: #6d5444;
+    line-height: 1.5;
+}
+
+.contact-layout {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 50px;
+}
+
+.contact-form-cell {
+    vertical-align: top;
+    width: 58%;
+    padding-right: 35px;
+}
+
+.contact-info-cell {
+    vertical-align: top;
+    width: 42%;
+}
+
+.contact-card,
+.info-card {
+    background-color: #ffffff;
+    border: 1px solid #ebdcd3;
+    border-radius: 12px;
+    padding: 26px;
+    box-shadow: 0 4px 18px rgba(74, 44, 27, 0.08);
+    margin-bottom: 25px;
+}
+
+.contact-card h2,
+.info-card h3 {
+    margin-top: 0;
+    color: #4a2c1b;
+    font-size: 20px;
+    border-bottom: 2px solid #ebdcd3;
+    padding-bottom: 10px;
+}
+
+.info-item {
+    margin: 15px 0;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #5c3d2e;
+}
+
+.info-label {
+    font-weight: bold;
+    color: #4a2c1b;
+    display: block;
+    margin-bottom: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   10. ADMIN GRIDVIEWS, STATS CARDS & ACTIONS
+   -------------------------------------------------------------------------- */
+.stats-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 35px;
+}
+
+.stat-card {
+    background-color: #ffffff;
+    border: 1px solid #ebdcd3;
+    border-radius: 10px;
+    padding: 22px;
+    text-align: center;
+    box-shadow: 0 3px 12px rgba(74, 44, 27, 0.06);
+    width: 23%;
+}
+
+.stat-icon {
+    font-size: 32px;
+    margin-bottom: 6px;
+}
+
+.stat-value {
+    font-size: 28px;
+    font-weight: bold;
+    color: #c45b4c;
+    margin-bottom: 4px;
+}
+
+.stat-label {
+    font-size: 13px;
+    color: #6d5444;
+    font-weight: 500;
+}
+
+.actions-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.action-card {
+    background-color: #ffffff;
+    border: 1px solid #ebdcd3;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 31%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.action-btn {
+    background-color: #4a2c1b;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 18px;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.action-btn:hover {
+    background-color: #c45b4c;
+}
+
+.grid-view-table {
+    width: 100%;
+    background-color: #ffffff;
+    border: 1px solid #ebdcd3;
+    border-radius: 8px;
+    overflow: hidden;
+    border-collapse: collapse;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.grid-view-table th {
+    background-color: #4a2c1b;
+    color: #ffffff;
+    padding: 12px 10px;
+    font-size: 14px;
+    text-align: left;
+}
+
+.grid-view-table td {
+    padding: 12px 10px;
+    border-bottom: 1px solid #f0e6df;
+    font-size: 13px;
+    vertical-align: middle;
+}
+
+.grid-view-table tr:hover {
+    background-color: #faf4ef;
+}
+
+.cake-thumb {
+    width: 65px;
+    height: 65px;
+    border-radius: 6px;
+    object-fit: cover;
+    border: 1px solid #ebdcd3;
+}
+
+.user-avatar {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ebdcd3;
+}
+
+.link-edit {
+    background-color: #e67e22;
+    color: #ffffff;
+    padding: 5px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.link-delete {
+    background-color: #c0392b;
+    color: #ffffff;
+    padding: 5px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.edit-box {
+    background-color: #ffffff;
+    border: 1px solid #ebdcd3;
+    border-radius: 10px;
+    padding: 22px 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 3px 12px rgba(74, 44, 27, 0.06);
+}
+
+.edit-title {
+    color: #4a2c1b;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 0 15px 0;
+    border-bottom: 1px solid #ebdcd3;
+    padding-bottom: 8px;
+}
+
+.btn-update {
+    background-color: #c45b4c;
+    color: #ffffff;
+    border: none;
+    padding: 9px 22px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-update:hover {
+    background-color: #a83d30;
+}
+
+/* --------------------------------------------------------------------------
+   11. ALERTS, BADGES & MESSAGES
+   -------------------------------------------------------------------------- */
+.alert-box {
+    padding: 11px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    margin-bottom: 18px;
+    display: block;
+}
+
+.alert-error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.user-count-badge {
+    background-color: #4a2c1b;
+    color: #ffffff;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* --------------------------------------------------------------------------
+   12. STOREFRONT FOOTER
+   -------------------------------------------------------------------------- */
+.footer-container {
+    background-color: #361e11;
+    color: #e0d3c9;
+    padding: 40px 20px 20px 20px;
+    margin-top: 60px;
+    border-top: 4px solid #c45b4c;
+}
+
+.footer-table {
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.footer-col {
+    vertical-align: top;
+    padding: 10px 20px;
+    width: 25%;
+}
+
+.footer-col h3 {
+    color: #ffffff;
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 12px;
+    border-bottom: 2px solid #d4a373;
+    display: inline-block;
+    padding-bottom: 4px;
+}
+
+.footer-col p {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #baa495;
+    margin: 5px 0;
+}
+
+.footer-col a {
+    color: #d4a373;
+    text-decoration: none;
+    font-size: 13px;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.footer-col a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #4d2f1d;
+    padding-top: 18px;
+    margin-top: 25px;
+    font-size: 13px;
+    color: #a89486;
+}
