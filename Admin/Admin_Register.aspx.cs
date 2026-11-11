@@ -81,7 +81,7 @@ namespace The_Cake_Atelier.Admin
                 return;
             }
 
-            // 2. Upload photo into Admin/Images/
+            // 2. Upload photo
             imageupload();
 
             // 3. Insert new admin record

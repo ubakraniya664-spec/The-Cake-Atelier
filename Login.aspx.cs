@@ -32,7 +32,7 @@ namespace The_Cake_Atelier
             con.Open();
         }
 
-        // Authenticate and store Name in Session["user"]
+        // Validate user login credentials
         protected void Button1_Click(object sender, EventArgs e)
         {
             if (txtemail.Text != "" && txtpwd.Text != "")
@@ -45,10 +45,10 @@ namespace The_Cake_Atelier
 
                 if (ds.Tables[0].Rows.Count > 0)
                 {
-                    // Store Customer Name for the header greeting (e.g. "Welcome, Trusha")
+                    // Store user session
                     Session["user"] = ds.Tables[0].Rows[0]["Name"].ToString();
 
-                    // Store Customer Email for database orders
+                    // Store user email
                     Session["user_email"] = ds.Tables[0].Rows[0]["Email"].ToString();
 
                     if (Session["cart_cake_id"] != null)

@@ -4,6 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+    <meta charset="utf-8" />
     <title>Manage Cakes Catalog - Bakery Admin</title>
     <link href="../Style.css" rel="stylesheet" type="text/css" />
 </head>
@@ -38,15 +39,20 @@
             <!-- Status alert label -->
             <asp:Label ID="lblMsg" runat="server" Visible="false"></asp:Label>
 
-            <!-- Edit Cake Form Panel (Visible when Admin clicks "Edit") -->
-            <asp:Panel ID="pnlEdit" runat="server" Visible="false" CssClass="edit-box">
-                <div class="edit-title">&#9998; Edit Cake Details (ID: <asp:Label ID="lblEditId" runat="server"></asp:Label>)</div>
+            <!-- Edit Cake Form Panel -->
+            <div class="edit-box">
+                <div class="edit-title">
+                    &#9998; Edit Cake Details (ID:
+                    <asp:Label ID="lblEditId" runat="server"></asp:Label>)
+                </div>
                 <table class="form-table">
                     <tr>
                         <td style="width: 15%;" class="form-label">Cake Name:</td>
-                        <td style="width: 35%;"><asp:TextBox ID="txtname" runat="server" CssClass="form-input"></asp:TextBox></td>
-                        <td style="width: 15%;" class="form-label">Price (&#8377;):</td>
-                        <td style="width: 35%;"><asp:TextBox ID="txtprice" runat="server" CssClass="form-input"></asp:TextBox></td>
+                        <td style="width: 35%;">
+                            <asp:TextBox ID="txtname" runat="server" CssClass="form-input"></asp:TextBox></td>
+                        <td style="width: 15%;" class="form-label">Price (₹):</td>
+                        <td style="width: 35%;">
+                            <asp:TextBox ID="txtprice" runat="server" CssClass="form-input"></asp:TextBox></td>
                     </tr>
                     <tr>
                         <td class="form-label">Category:</td>
@@ -69,7 +75,7 @@
                     <tr>
                         <td class="form-label">Description:</td>
                         <td colspan="3">
-                            <asp:TextBox ID="txtdesc" runat="server" TextMode="MultiLine" Rows="2" CssClass="form-input" style="font-family:inherit;"></asp:TextBox>
+                            <asp:TextBox ID="txtdesc" runat="server" TextMode="MultiLine" Rows="2" CssClass="form-input" Style="font-family: inherit;"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
@@ -80,9 +86,8 @@
                         </td>
                     </tr>
                 </table>
-            </asp:Panel>
-
-            <!-- ASP:GRIDVIEW - DISPLAYING ALL CAKES -->
+            </div>
+            <!-- Cakes Catalog GridView -->
             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CssClass="grid-view-table" OnRowCommand="GridView1_RowCommand">
                 <Columns>
                     <asp:TemplateField HeaderText="ID" ItemStyle-Width="50px">
@@ -90,7 +95,7 @@
                             <asp:Label ID="lblId" runat="server" Text='<%# Eval("Cake_Id") %>' Font-Bold="true"></asp:Label>
                         </ItemTemplate>
 
-<ItemStyle Width="50px"></ItemStyle>
+                        <ItemStyle Width="50px"></ItemStyle>
                     </asp:TemplateField>
 
                     <asp:TemplateField HeaderText="Photo" ItemStyle-Width="80px">
@@ -98,7 +103,7 @@
                             <asp:Image ID="imgCake" runat="server" ImageUrl='<%# ("~/" + Eval("Cake_Image")) %>' CssClass="cake-thumb" />
                         </ItemTemplate>
 
-<ItemStyle Width="80px"></ItemStyle>
+                        <ItemStyle Width="80px"></ItemStyle>
                     </asp:TemplateField>
 
                     <asp:TemplateField HeaderText="Cake Name">
@@ -112,7 +117,7 @@
                             <%# Eval("Cake_Category") %>
                         </ItemTemplate>
 
-<ItemStyle Width="110px"></ItemStyle>
+                        <ItemStyle Width="110px"></ItemStyle>
                     </asp:TemplateField>
 
                     <asp:TemplateField HeaderText="Type" ItemStyle-Width="90px">
@@ -120,36 +125,35 @@
                             <%# Eval("Cake_Type") %>
                         </ItemTemplate>
 
-<ItemStyle Width="90px"></ItemStyle>
+                        <ItemStyle Width="90px"></ItemStyle>
                     </asp:TemplateField>
 
                     <asp:TemplateField HeaderText="Price" ItemStyle-Width="90px">
                         <ItemTemplate>
-                            <span style="color:#c45b4c; font-weight:bold;">&#8377;<%# Eval("Cake_Price") %></span>
+                            <span style="color: #c45b4c; font-weight: bold;">₹<%# Eval("Cake_Price") %></span>
                         </ItemTemplate>
 
-<ItemStyle Width="90px"></ItemStyle>
+                        <ItemStyle Width="90px"></ItemStyle>
                     </asp:TemplateField>
 
                     <asp:TemplateField HeaderText="Description">
                         <ItemTemplate>
-                            <div style="font-size:12px; color:#6d5444; max-width:320px;"><%# Eval("Cake_Desc") %></div>
+                            <div style="font-size: 12px; color: #6d5444; max-width: 320px;"><%# Eval("Cake_Desc") %></div>
                         </ItemTemplate>
                     </asp:TemplateField>
 
                     <asp:TemplateField HeaderText="Actions" ItemStyle-Width="140px">
                         <ItemTemplate>
                             <asp:LinkButton ID="lnkEdit" runat="server" CommandArgument='<%# Eval("Cake_Id") %>' CommandName="cmd_edt" CssClass="link-edit">Edit</asp:LinkButton>
-                            <asp:LinkButton ID="lnkDelete" runat="server" CommandArgument='<%# Eval("Cake_Id") %>' CommandName="cmd_del" CssClass="link-delete" OnClientClick="return confirm('Are you sure you want to delete this cake?');">Delete</asp:LinkButton>
+                            <asp:LinkButton ID="lnkDelete" runat="server" CommandArgument='<%# Eval("Cake_Id") %>' CommandName="cmd_del" CssClass="link-delete">Delete</asp:LinkButton>
                         </ItemTemplate>
 
-<ItemStyle Width="140px"></ItemStyle>
+                        <ItemStyle Width="140px"></ItemStyle>
                     </asp:TemplateField>
                 </Columns>
             </asp:GridView>
 
         </div>
-
     </form>
 </body>
 </html>

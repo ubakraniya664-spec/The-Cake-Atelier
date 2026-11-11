@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,11 +13,17 @@ namespace The_Cake_Atelier
     public partial class Cart : System.Web.UI.Page
     {
         SqlConnection con;
-        SqlDataAdapter da;
         SqlCommand cmd;
+        SqlDataAdapter da;
         DataSet ds;
 
         string s = ConfigurationManager.ConnectionStrings["dbcon"].ConnectionString;
+
+        void getcon()
+        {
+            con = new SqlConnection(s);
+            con.Open();
+        }
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -27,110 +33,146 @@ namespace The_Cake_Atelier
                 return;
             }
 
-            // Shows user's name in greeting
             lblUserGreeting.Text = "Welcome, " + Session["user"].ToString();
 
             if (!IsPostBack)
             {
-                if (Session["cart_cake_id"] != null)
+                if (Request.QueryString["pid"] != null)
                 {
-                    fillCartDataList(Session["cart_cake_id"].ToString());
-                    pnlActiveCart.Visible = true;
-                    pnlEmptyCart.Visible = false;
+                    int pid = Convert.ToInt32(Request.QueryString["pid"]);
+                    addToCart(pid);
+                    Response.Redirect("Cart.aspx");
+                    return;
                 }
-                else
-                {
-                    pnlActiveCart.Visible = false;
-                    pnlEmptyCart.Visible = true;
-                }
+
+                fillCartGrid();
             }
         }
 
-        void getCon()
+        // Add selected cake to cart
+        void addToCart(int pid)
         {
-            con = new SqlConnection(s);
-            con.Open();
-        }
+            string user = Session["user"].ToString();
 
-        void fillCartDataList(string cakeId)
-        {
-            getCon();
-            da = new SqlDataAdapter("select * from tbl_cakes where Cake_Id='" + cakeId + "'", con);
+            getcon();
+            da = new SqlDataAdapter("select * from tbl_cart where cart_prod_id='" + pid + "' and cart_user_id='" + user + "'", con);
             ds = new DataSet();
             da.Fill(ds);
 
             if (ds.Tables[0].Rows.Count > 0)
             {
-                DataListCart.DataSource = ds;
-                DataListCart.DataBind();
-
-                ViewState["Cake_Id"] = ds.Tables[0].Rows[0]["Cake_Id"].ToString();
-                ViewState["Cake_Name"] = ds.Tables[0].Rows[0]["Cake_Name"].ToString();
-                ViewState["Cake_Price"] = Convert.ToInt32(ds.Tables[0].Rows[0]["Cake_Price"]);
-
-                updateTotal();
+                cmd = new SqlCommand("update tbl_cart set qunty = qunty + 1 where cart_prod_id='" + pid + "' and cart_user_id='" + user + "'", con);
+                cmd.ExecuteNonQuery();
             }
-            con.Close();
-        }
-
-        void updateTotal()
-        {
-            int price = Convert.ToInt32(ViewState["Cake_Price"]);
-            int qty = Convert.ToInt32(ddlQuantity.SelectedValue);
-            int total = price * qty;
-            ViewState["Total_Price"] = total;
-            lblTotalPrice.Text = total.ToString();
-        }
-
-        protected void ddlQuantity_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            updateTotal();
-        }
-
-        protected void btnConfirmOrder_Click(object sender, EventArgs e)
-        {
-            if (txtRecipient.Text == "" || txtPhone.Text == "" || txtAddress.Text == "")
+            else
             {
-                lblCartError.Text = "Please fill in recipient name, contact phone, and delivery address.";
-                lblCartError.Visible = true;
-                return;
+                SqlDataAdapter daCake = new SqlDataAdapter("select * from tbl_cakes where Cake_Id='" + pid + "'", con);
+                DataSet dsCake = new DataSet();
+                daCake.Fill(dsCake);
+
+                string price = "0";
+                if (dsCake.Tables[0].Rows.Count > 0)
+                {
+                    price = dsCake.Tables[0].Rows[0]["Cake_Price"].ToString();
+                }
+
+                string addedDate = DateTime.Now.ToString("dd-MM-yyyy");
+                cmd = new SqlCommand("insert into tbl_cart(cart_prod_id, cart_user_id, qunty, total, addeddate) values('" + pid + "', '" + user + "', 1, '" + price + "', '" + addedDate + "')", con);
+                cmd.ExecuteNonQuery();
+            }
+            con.Close();
+        }
+
+        // Fetch user cart items from database
+        void fillCartGrid()
+        {
+            getcon();
+            string user = "Guest";
+            if (Session["user"] != null)
+            {
+                user = Session["user"].ToString();
             }
 
-            getCon();
-
-            // Uses user's email for database record
-            string userEmail = Session["user_email"] != null ? Session["user_email"].ToString() : Session["user"].ToString();
-            int cakeId = Convert.ToInt32(ViewState["Cake_Id"]);
-            string cakeName = ViewState["Cake_Name"].ToString();
-            int cakePrice = Convert.ToInt32(ViewState["Cake_Price"]);
-            int quantity = Convert.ToInt32(ddlQuantity.SelectedValue);
-            int totalPrice = Convert.ToInt32(ViewState["Total_Price"]);
-            string recipient = txtRecipient.Text;
-            string phone = txtPhone.Text;
-            string address = txtAddress.Text;
-            string message = txtMessage.Text;
-
-            string query = "INSERT INTO tbl_orders (User_Email, Cake_Id, Cake_Name, Cake_Price, Quantity, Total_Price, Recipient_Name, Phone, Address, Message_On_Cake) " +
-                           "VALUES ('" + userEmail + "', " + cakeId + ", '" + cakeName + "', " + cakePrice + ", " + quantity + ", " + totalPrice + ", '" + recipient + "', '" + phone + "', '" + address + "', '" + message + "'); " +
-                           "SELECT SCOPE_IDENTITY();";
-
-            cmd = new SqlCommand(query, con);
-            object identityVal = cmd.ExecuteScalar();
+            da = new SqlDataAdapter("select c.cart_id, c.cart_prod_id, c.qunty, c.total, c.addeddate, p.Cake_Name, p.Cake_Image from tbl_cart c inner join tbl_cakes p on c.cart_prod_id = p.Cake_Id where c.cart_user_id='" + user + "'", con);
+            ds = new DataSet();
+            da.Fill(ds);
+            GridView1.DataSource = ds;
+            GridView1.DataBind();
             con.Close();
 
-            string realOrderId = identityVal.ToString();
+            // Calculate total cart value
+            int grandTotal = 0;
+            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+            {
+                int q = Convert.ToInt32(ds.Tables[0].Rows[i]["qunty"]);
+                int price = Convert.ToInt32(ds.Tables[0].Rows[i]["total"]);
+                grandTotal += (q * price);
+            }
+            lblTotal.Text = grandTotal.ToString();
+        }
 
-            Session["cart_cake_id"] = null;
+        // Set row in edit mode
+        protected void GridView1_RowEditing(object sender, GridViewEditEventArgs e)
+        {
+            GridView1.EditIndex = e.NewEditIndex;
+            fillCartGrid();
+        }
 
-            pnlActiveCart.Visible = false;
-            pnlOrderSuccess.Visible = true;
-            lblConfirmedOrderId.Text = "Database Order ID: #" + realOrderId;
+        // Cancel row edit
+        protected void GridView1_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
+        {
+            GridView1.EditIndex = -1;
+            fillCartGrid();
+        }
+
+        // Update item quantity in cart
+        protected void GridView1_RowUpdating(object sender, GridViewUpdateEventArgs e)
+        {
+            int cartId = Convert.ToInt32(GridView1.DataKeys[e.RowIndex].Value);
+            DropDownList ddl = (DropDownList)GridView1.Rows[e.RowIndex].FindControl("ddlQunty");
+            if (ddl != null)
+            {
+                int newQty = Convert.ToInt32(ddl.SelectedValue);
+                getcon();
+                cmd = new SqlCommand("update tbl_cart set qunty=" + newQty + " where cart_id=" + cartId, con);
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+
+            GridView1.EditIndex = -1;
+            fillCartGrid();
+        }
+
+        // Remove item from cart
+        protected void GridView1_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            int cartId = Convert.ToInt32(GridView1.DataKeys[e.RowIndex].Value);
+            getcon();
+            cmd = new SqlCommand("delete from tbl_cart where cart_id=" + cartId, con);
+            cmd.ExecuteNonQuery();
+            con.Close();
+
+            GridView1.EditIndex = -1;
+            fillCartGrid();
         }
 
         protected void lnkLogout_Click(object sender, EventArgs e)
         {
             Session.Abandon();
             Response.Redirect("Default.aspx");
+        }
+
+        protected void btnCheckout_Click(object sender, EventArgs e)
+        {
+            if (GridView1.Rows.Count == 0)
+            {
+                lblMsg.Text = "Your cart is currently empty!";
+                lblMsg.CssClass = "alert-box alert-error";
+                lblMsg.Visible = true;
+                return;
+            }
+
+            Response.Redirect("Order.aspx");
         }
     }
 }

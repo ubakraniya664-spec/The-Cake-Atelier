@@ -4,7 +4,8 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Shopping Cart &amp; Checkout - The Cake Atelier</title>
+    <meta charset="utf-8" />
+    <title>My Shopping Cart - The Cake Atelier</title>
     <link href="Style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -34,113 +35,132 @@
         </div>
 
         <!-- Cart Container -->
-        <div class="cart-container">
-            <h2 class="page-title">Your Shopping Cart &amp; Checkout</h2>
+        <div class="cart-container" style="max-width: 950px; margin: 40px auto; padding: 30px;">
+            <center>
+                <h1 style="color: #4a2c1b; margin-bottom: 5px;">My Shopping Cart</h1>
+                <p style="color: #7d5e4b; font-size: 14px; margin-bottom: 25px;">Review items in your basket. Click Edit to update quantity or delete an item.</p>
 
-            <!-- Empty Cart Notice -->
-            <asp:Panel ID="pnlEmptyCart" runat="server" Visible="false" style="text-align:center; padding: 40px 10px;">
-                <div style="font-size: 40px; margin-bottom: 10px;">&#129382;</div>
-                <div style="font-size: 18px; color: #4a2c1b; font-weight: bold; margin-bottom: 8px;">Your cart is currently empty!</div>
-                <p style="color: #7d5e4b; font-size: 14px; margin-bottom: 20px;">Choose a handcrafted cake from our catalog to get started.</p>
-                <asp:HyperLink ID="btnBrowse" runat="server" NavigateUrl="Cakes.aspx" style="background-color:#4a2c1b; color:#ffffff; padding:10px 22px; text-decoration:none; border-radius:5px; font-weight:bold;">Explore Cake Menu &rarr;</asp:HyperLink>
-            </asp:Panel>
+                <!-- Status Message -->
+                <asp:Label ID="lblMsg" runat="server" Visible="false" Font-Bold="true"></asp:Label>
 
-            <!-- Order Success Confirmation (Real Database Order ID) -->
-            <asp:Panel ID="pnlOrderSuccess" runat="server" Visible="false" CssClass="order-success-box">
-                <div style="font-size: 32px; margin-bottom: 8px;">&#10004;</div>
-                <h3 style="margin: 0 0 10px 0; color: #155724;">Thank You! Your Order has been Placed.</h3>
-                <p>
-                    <asp:Label ID="lblConfirmedOrderId" runat="server" Font-Bold="true" Font-Size="19px"></asp:Label>
-                </p>
-                <p style="font-size: 14px; color: #1e7e34; margin-bottom: 20px;">
-                    Your fresh cake order has been saved in the database!
-                </p>
-                <asp:HyperLink ID="lnkBackHome" runat="server" NavigateUrl="Default.aspx" style="color: #155724; font-weight: bold; text-decoration: underline;">Return to Home Page</asp:HyperLink>
-            </asp:Panel>
+                <!-- Shopping Cart GridView -->
+                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False"
+                    DataKeyNames="cart_id"
+                    CssClass="grid-view-table" Width="100%"
+                    OnRowEditing="GridView1_RowEditing"
+                    OnRowCancelingEdit="GridView1_RowCancelingEdit"
+                    OnRowUpdating="GridView1_RowUpdating"
+                    OnRowDeleting="GridView1_RowDeleting">
+                    <Columns>
+                        <asp:TemplateField HeaderText="Cake Photo" ItemStyle-HorizontalAlign="Center" HeaderStyle-HorizontalAlign="Center">
+                            <ItemTemplate>
+                                <asp:Image ID="imgProd" runat="server" Height="70px" Width="70px" CssClass="cake-thumb" ImageUrl='<%# Eval("Cake_Image") %>' />
+                            </ItemTemplate>
+                        </asp:TemplateField>
 
-            <!-- Active Cart Panel -->
-            <asp:Panel ID="pnlActiveCart" runat="server">
-                
-                <div class="form-section-title">Selected Cake Details</div>
+                        <asp:TemplateField HeaderText="Cake Name">
+                            <ItemTemplate>
+                                <asp:Label ID="lblProdName" runat="server" Text='<%# Eval("Cake_Name") %>' Font-Bold="true" ForeColor="#4a2c1b"></asp:Label>
+                            </ItemTemplate>
+                        </asp:TemplateField>
 
-                <!-- ASP:DATALIST CONTROL FOR CART ITEM -->
-                <asp:DataList ID="DataListCart" runat="server" Width="100%">
-                    <ItemTemplate>
-                        <div class="cart-item-box">
-                            <table style="width: 100%; border-collapse: collapse;">
-                                <tr>
-                                    <td style="width: 130px; vertical-align: middle;">
-                                        <asp:Image ID="imgItem" runat="server" ImageUrl='<%# Eval("Cake_Image") %>' CssClass="cart-item-img" />
-                                    </td>
-                                    <td style="vertical-align: top; padding-left: 15px;">
-                                        <h3 style="margin: 0 0 6px 0; color: #4a2c1b; font-size: 20px;">
-                                            <%# Eval("Cake_Name") %>
-                                        </h3>
-                                        <p style="margin: 0 0 10px 0; color: #6d5444; font-size: 13px; line-height: 1.5;">
-                                            <%# Eval("Cake_Desc") %>
-                                        </p>
-                                        <div style="font-size: 15px; color: #7d5e4b;">
-                                            Category: <strong><%# Eval("Cake_Category") %></strong> | Type: <strong><%# Eval("Cake_Type") %></strong>
-                                        </div>
-                                        <div style="font-size: 18px; font-weight: bold; color: #c45b4c; margin-top: 8px;">
-                                            Price: &#8377;<%# Eval("Cake_Price") %>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </table>
+                        <asp:TemplateField HeaderText="Price (₹)" ItemStyle-HorizontalAlign="Center" HeaderStyle-HorizontalAlign="Center">
+                            <ItemTemplate>
+                                <asp:Label ID="lblPrice" runat="server" Text='<%# "₹" + Eval("total") %>' Font-Bold="true" ForeColor="#c45b4c"></asp:Label>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+
+                        <asp:TemplateField HeaderText="Quantity" ItemStyle-HorizontalAlign="Center" HeaderStyle-HorizontalAlign="Center">
+                            <ItemTemplate>
+                                <asp:Label ID="lblQunty" runat="server" Text='<%# Eval("qunty") %>'></asp:Label>
+                            </ItemTemplate>
+                            <EditItemTemplate>
+                                <asp:DropDownList ID="ddlQunty" runat="server" SelectedValue='<%# Eval("qunty") %>' Style="padding: 4px 8px; border-radius: 4px;">
+                                    <asp:ListItem Value="1">1</asp:ListItem>
+                                    <asp:ListItem Value="2">2</asp:ListItem>
+                                    <asp:ListItem Value="3">3</asp:ListItem>
+                                    <asp:ListItem Value="4">4</asp:ListItem>
+                                    <asp:ListItem Value="5">5</asp:ListItem>
+                                    <asp:ListItem Value="6">6</asp:ListItem>
+                                </asp:DropDownList>
+                            </EditItemTemplate>
+                        </asp:TemplateField>
+
+                        <asp:TemplateField HeaderText="Added Date" ItemStyle-HorizontalAlign="Center" HeaderStyle-HorizontalAlign="Center">
+                            <ItemTemplate>
+                                <asp:Label ID="lblDate" runat="server" Text='<%# Eval("addeddate") %>' ForeColor="#7d5e4b"></asp:Label>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+
+                        <asp:TemplateField HeaderText="Action" ItemStyle-HorizontalAlign="Center" HeaderStyle-HorizontalAlign="Center">
+                            <ItemTemplate>
+                                <asp:LinkButton ID="lnkEdit" runat="server" CssClass="link-edit" CommandName="Edit">Edit</asp:LinkButton>
+                            </ItemTemplate>
+                            <EditItemTemplate>
+                                <asp:LinkButton ID="lnkUpdate" runat="server" CssClass="link-edit" CommandName="Update">Update</asp:LinkButton>
+                                &nbsp;
+                                <asp:LinkButton ID="lnkDelete" runat="server" CssClass="link-delete" CommandName="Delete">Delete</asp:LinkButton>
+                                &nbsp;
+                                <asp:LinkButton ID="lnkCancel" runat="server" CssClass="link-edit" CommandName="Cancel">Cancel</asp:LinkButton>
+                            </EditItemTemplate>
+                        </asp:TemplateField>
+                    </Columns>
+                    <EmptyDataTemplate>
+                        <div style="padding: 35px 20px; text-align: center;">
+                            <div style="font-size: 36px; margin-bottom: 8px;">🛒</div>
+                            <div style="color: #4a2c1b; font-size: 16px; font-weight: bold; margin-bottom: 6px;">Your cart is currently empty!</div>
+                            <p style="color: #7d5e4b; font-size: 13px; margin-bottom: 15px;">Explore our cake catalog to pick your favorite confection.</p>
+                            <a href="Cakes.aspx" class="action-btn">Browse Cakes Menu &rarr;</a>
                         </div>
-                    </ItemTemplate>
-                </asp:DataList>
+                    </EmptyDataTemplate>
+                </asp:GridView>
 
-                <!-- Order Billing & Delivery Details -->
-                <div class="form-section-title">Billing &amp; Delivery Information</div>
-                <table class="checkout-table">
-                    <tr>
-                        <td style="width: 25%;"><strong>Select Quantity:</strong></td>
-                        <td>
-                            <asp:DropDownList ID="ddlQuantity" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlQuantity_SelectedIndexChanged" style="padding: 6px 12px; border-radius: 4px; border: 1px solid #d4c3b7;">
-                                <asp:ListItem Value="1">1</asp:ListItem>
-                                <asp:ListItem Value="2">2</asp:ListItem>
-                                <asp:ListItem Value="3">3</asp:ListItem>
-                                <asp:ListItem Value="4">4</asp:ListItem>
-                                <asp:ListItem Value="5">5</asp:ListItem>
-                            </asp:DropDownList>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><strong>Total Amount:</strong></td>
-                        <td>
-                            <span style="font-size: 20px; font-weight: bold; color: #c45b4c;">
-                                &#8377;<asp:Label ID="lblTotalPrice" runat="server"></asp:Label>
-                            </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><strong>Recipient Name:</strong></td>
-                        <td><asp:TextBox ID="txtRecipient" runat="server" CssClass="txt-input"></asp:TextBox></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Contact Phone:</strong></td>
-                        <td><asp:TextBox ID="txtPhone" runat="server" CssClass="txt-input"></asp:TextBox></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Delivery Address:</strong></td>
-                        <td><asp:TextBox ID="txtAddress" runat="server" TextMode="MultiLine" Rows="2" CssClass="txt-input"></asp:TextBox></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Message on Cake (Optional):</strong></td>
-                        <td><asp:TextBox ID="txtMessage" runat="server" placeholder="e.g., Happy 25th Birthday Rhea!" CssClass="txt-input"></asp:TextBox></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>
-                            <asp:Label ID="lblCartError" runat="server" ForeColor="#c45b4c" Font-Bold="true" Visible="false"></asp:Label>
-                            <br />
-                            <asp:Button ID="btnConfirmOrder" runat="server" Text="Confirm &amp; Place Order" CssClass="btn-confirm" OnClick="btnConfirmOrder_Click" />
-                        </td>
-                    </tr>
-                </table>
-            </asp:Panel>
+                <div style="margin-top: 25px; padding: 18px 24px; background-color: #faf4ef; border: 1px solid #ebdcd3; border-radius: 8px; display: flex; justify-content: space-between; align-items: center;">
+                    <div style="font-size: 18px; font-weight: bold; color: #4a2c1b;">
+                        Grand Total: <span style="color: #c45b4c; font-size: 24px;">₹<asp:Label ID="lblTotal" runat="server" Text="0"></asp:Label></span>
+                    </div>
+                    <div>
+                        <asp:Button ID="btnCheckout" runat="server" Text="Proceed to Checkout &rarr;" CssClass="action-btn" OnClick="btnCheckout_Click" />
+                        <br />
+                    </div>
+                </div>
+                <asp:HyperLink ID="lnkContinue" runat="server" NavigateUrl="Cakes.aspx" CssClass="action-btn" Style="background-color: #4a2c1b; margin-right: 12px;">
+                    &larr; Continue Shopping
+                </asp:HyperLink>
+            </center>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer-container">
+            <table class="footer-table">
+                <tr>
+                    <td class="footer-col">
+                        <h3>The Cake Atelier</h3>
+                        <p>Artisanal bakery and pâtisserie crafting bespoke confections and fresh daily baked cakes.</p>
+                    </td>
+                    <td class="footer-col">
+                        <h3>Quick Links</h3>
+                        <a href="Default.aspx">Home</a>
+                        <a href="Cakes.aspx">All Cakes</a>
+                        <a href="About.aspx">About Us</a>
+                        <a href="Contact.aspx">Contact Us</a>
+                    </td>
+                    <td class="footer-col">
+                        <h3>Customer Care</h3>
+                        <a href="login.aspx">Member Login</a>
+                        <a href="register.aspx">Register Account</a>
+                        <a href="Cart.aspx">My Cart</a>
+                    </td>
+                    <td class="footer-col">
+                        <h3>Bakery Hours</h3>
+                        <p>Monday - Saturday: 8:00 AM - 10:00 PM</p>
+                        <p>Sunday: 9:00 AM - 9:00 PM</p>
+                    </td>
+                </tr>
+            </table>
+            <div class="footer-bottom">
+                &copy; 2026 The Cake Atelier. All Rights Reserved.
+            </div>
         </div>
 
     </form>

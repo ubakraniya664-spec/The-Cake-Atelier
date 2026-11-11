@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -61,7 +61,7 @@ namespace The_Cake_Atelier.Admin
             droptype.SelectedIndex = 0;
         }
 
-        // Inserts new cake record into tbl_cakes (mimicking Reference_Code Add_Product.aspx.cs)
+        // Insert new cake into database
         protected void btnAddCake_Click(object sender, EventArgs e)
         {
             if (txtname.Text == "" || txtprice.Text == "" || txtdesc.Text == "")

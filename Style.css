@@ -893,6 +893,9 @@ body.admin-auth-body {
     text-decoration: none;
     font-weight: bold;
     font-size: 12px;
+    display: inline-block;
+    white-space: nowrap;
+    margin: 2px 0;
 }
 
 .link-delete {
@@ -903,6 +906,9 @@ body.admin-auth-body {
     text-decoration: none;
     font-weight: bold;
     font-size: 12px;
+    display: inline-block;
+    white-space: nowrap;
+    margin: 2px 0;
 }
 
 .edit-box {

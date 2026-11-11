@@ -73,11 +73,13 @@
     <Content Include="Admin\Admin_Register.aspx" />
     <Content Include="Admin\Dashboard.aspx" />
     <Content Include="Admin\Manage_Cakes.aspx" />
+    <Content Include="Admin\View_Orders.aspx" />
     <Content Include="Admin\View_Users.aspx" />
     <Content Include="App_Data\Database1.mdf" />
     <Content Include="App_Data\Database1_log.ldf">
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
+    <Content Include="Billing.aspx" />
     <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
     <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
     <Content Include="bin\roslyn\csc.exe" />
@@ -141,6 +143,7 @@
     <Content Include="obj\Debug\The Cake Atelier.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\The Cake Atelier.dll" />
     <Content Include="obj\Debug\The Cake Atelier.pdb" />
+    <Content Include="Order.aspx" />
     <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
     <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
     <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\csc.exe" />
@@ -248,12 +251,26 @@
     <Compile Include="Admin\Manage_Cakes.aspx.designer.cs">
       <DependentUpon>Manage_Cakes.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\View_Orders.aspx.cs">
+      <DependentUpon>View_Orders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\View_Orders.aspx.designer.cs">
+      <DependentUpon>View_Orders.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\View_Users.aspx.cs">
       <DependentUpon>View_Users.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\View_Users.aspx.designer.cs">
       <DependentUpon>View_Users.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Billing.aspx.cs">
+      <DependentUpon>Billing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Billing.aspx.designer.cs">
+      <DependentUpon>Billing.aspx</DependentUpon>
     </Compile>
     <Compile Include="Cakes.aspx.cs">
       <DependentUpon>Cakes.aspx</DependentUpon>
@@ -294,6 +311,13 @@
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
+    <Compile Include="Order.aspx.cs">
+      <DependentUpon>Order.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Order.aspx.designer.cs">
+      <DependentUpon>Order.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>
@@ -387,7 +411,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>62379</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:44312/</IISUrl>
+          <IISUrl>https://localhost:44312/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

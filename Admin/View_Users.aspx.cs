@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -40,7 +40,7 @@ namespace The_Cake_Atelier.Admin
             con.Open();
         }
 
-        // Binds all registered users from tbl_users to GridView1
+        // Fetch registered users from database
         void fillgrid()
         {
             getCon();
@@ -55,7 +55,7 @@ namespace The_Cake_Atelier.Admin
             con.Close();
         }
 
-        // Deletes user account from tbl_users
+        // Delete user account
         protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
         {
             if (e.CommandName == "cmd_del")

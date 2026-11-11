@@ -4,6 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+    <meta charset="utf-8" />
     <title>Add New Cake - Bakery Admin</title>
     <link href="../Style.css" rel="stylesheet" type="text/css" />
 </head>
@@ -66,7 +67,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="form-label">Price (&#8377;):</td>
+                    <td class="form-label">Price (₹):</td>
                     <td>
                         <asp:TextBox ID="txtprice" runat="server" placeholder="e.g. 550" CssClass="form-input"></asp:TextBox>
                     </td>

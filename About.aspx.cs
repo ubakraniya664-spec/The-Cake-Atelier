@@ -14,7 +14,7 @@ namespace The_Cake_Atelier
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            // Check session to update sticky navigation bar greeting and links
+            
             if (Session["user"] != null)
             {
                 lblUserGreeting.Text = "Welcome, " + Session["user"].ToString();

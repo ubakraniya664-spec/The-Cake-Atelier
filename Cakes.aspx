@@ -4,6 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+    <meta charset="utf-8" />
     <title>Cakes &amp; Menu - The Cake Atelier</title>
     <link href="Style.css" rel="stylesheet" type="text/css" />
 </head>
@@ -75,15 +76,15 @@
                 </table>
             </div>
 
-            <!-- Dynamic Catalog DataList (Zero dummy values) -->
-            <asp:DataList ID="DataListCakes" runat="server" RepeatDirection="Horizontal" RepeatColumns="3" Width="100%" OnItemCommand="DataListCakes_ItemCommand">
+            <!-- Cakes Catalog DataList -->
+            <asp:DataList ID="DataListCakes" runat="server" RepeatDirection="Horizontal" RepeatColumns="3" Width="100%">
                 <ItemTemplate>
                     <div class="cake-card">
                         <asp:Image ID="imgCake" runat="server" ImageUrl='<%# Eval("Cake_Image") %>' CssClass="cake-img" AlternateText='<%# Eval("Cake_Name") %>' />
                         <div class="cake-title"><%# Eval("Cake_Name") %></div>
                         <div class="cake-desc"><%# Eval("Cake_Desc") %></div>
-                        <div class="cake-price">&#8377;<%# Eval("Cake_Price") %></div>
-                        <asp:Button ID="btnAddToCart" runat="server" Text="Add to Cart" CssClass="btn-order" CommandName="AddToCart" CommandArgument='<%# Eval("Cake_Id") %>' />
+                        <div class="cake-price">₹<%# Eval("Cake_Price") %></div>
+                        <asp:HyperLink ID="lnkAddToCart" runat="server" CssClass="btn-order" Style="display: block; box-sizing: border-box; text-decoration: none;" NavigateUrl='<%# "Cart.aspx?pid=" + Eval("Cake_Id") %>'>Add to Cart</asp:HyperLink>
                     </div>
                 </ItemTemplate>
             </asp:DataList>
@@ -119,8 +120,7 @@
                 </tr>
             </table>
             <div class="footer-bottom">
-                &copy; 2026 The Cake Atelier. All Rights Reserved.
-            </div>
+                &copy; 2026 The Cake Atelier. All Rights Reserved.</div>
         </div>
 
     </form>

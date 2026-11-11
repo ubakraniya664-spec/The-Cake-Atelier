@@ -13,6 +13,7 @@ namespace The_Cake_Atelier
     public partial class Default : System.Web.UI.Page
     {
         SqlConnection con;
+        SqlCommand cmd;
         SqlDataAdapter da;
         DataSet ds;
 
@@ -20,7 +21,7 @@ namespace The_Cake_Atelier
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            // 1. Session-based User Greeting & Nav Controls
+            // Check user login session
             if (Session["user"] != null)
             {
                 lblUserGreeting.Text = "Welcome, " + Session["user"].ToString();
@@ -39,7 +40,6 @@ namespace The_Cake_Atelier
                 lnkRegister.Visible = true;
             }
 
-            // 2. Load dynamic database data on initial load
             if (!IsPostBack)
             {
                 fillFeaturedCakes();
@@ -53,7 +53,7 @@ namespace The_Cake_Atelier
             con.Open();
         }
 
-        // Binds top 6 cakes dynamically from tbl_cakes
+        // Fetch featured cakes from database
         void fillFeaturedCakes()
         {
             getCon();
@@ -65,7 +65,7 @@ namespace The_Cake_Atelier
             con.Close();
         }
 
-        // Binds live reviews dynamically from tbl_reviews with cake names
+        // Load customer reviews from database
         void fillReviews()
         {
             getCon();
@@ -85,7 +85,7 @@ namespace The_Cake_Atelier
             con.Close();
         }
 
-        // Returns star icons based on rating number
+        // Display star rating
         public string GetStars(object rating)
         {
             int r = 5;
@@ -97,24 +97,6 @@ namespace The_Cake_Atelier
                 return stars;
             }
             return "&#9733;&#9733;&#9733;&#9733;&#9733;";
-        }
-
-        // Handles cake ordering: checks Session["user"]
-        protected void DataListFeaturedCakes_ItemCommand(object source, DataListCommandEventArgs e)
-        {
-            if (e.CommandName == "Order")
-            {
-                if (Session["user"] == null)
-                {
-                    Response.Redirect("login.aspx");
-                }
-                else
-                {
-                    // Pass selected cake id to Cart
-                    Session["cart_cake_id"] = e.CommandArgument.ToString();
-                    Response.Redirect("Cart.aspx");
-                }
-            }
         }
 
         // Handles Logout

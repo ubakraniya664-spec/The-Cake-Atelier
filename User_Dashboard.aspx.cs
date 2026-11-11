@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -34,7 +34,7 @@ namespace The_Cake_Atelier
             {
                 loadUserProfile();
                 loadCakesDropdown();
-                loadUserOrders();
+                loadMyOrders();
             }
         }
 
@@ -44,7 +44,7 @@ namespace The_Cake_Atelier
             con.Open();
         }
 
-        // Fetches customer record from tbl_users using their logged-in email
+        // Fetch user profile data
         void loadUserProfile()
         {
             getCon();
@@ -80,22 +80,26 @@ namespace The_Cake_Atelier
 
                 // Gender radio button
                 rblGender.ClearSelection();
-                if (rblGender.Items.FindByValue(gender) != null)
+                if (gender == "Female")
                 {
-                    rblGender.Items.FindByValue(gender).Selected = true;
+                    rblGender.SelectedValue = "Female";
+                }
+                else
+                {
+                    rblGender.SelectedValue = "Male";
                 }
 
                 // City dropdown
                 ddlCity.ClearSelection();
-                if (ddlCity.Items.FindByText(city) != null)
+                if (city != "")
                 {
-                    ddlCity.Items.FindByText(city).Selected = true;
+                    ddlCity.SelectedValue = city;
                 }
             }
             con.Close();
         }
 
-        // Populates the review dropdown with all available cakes
+        // Load cakes into review dropdown
         void loadCakesDropdown()
         {
             getCon();
@@ -111,30 +115,20 @@ namespace The_Cake_Atelier
             con.Close();
         }
 
-        // Loads orders placed by this customer from tbl_orders
-        void loadUserOrders()
+        // customer orders and status
+        void loadMyOrders()
         {
             getCon();
-            da = new SqlDataAdapter("select Order_Id, Cake_Name, Quantity, Total_Price, Order_Date from tbl_orders where User_Email='" + Session["user_email"] + "' order by Order_Id desc", con);
+            da = new SqlDataAdapter("select * from tbl_orders where order_user_id='" + Session["user_email"] + "' order by order_id desc", con);
             ds = new DataSet();
             da.Fill(ds);
 
-            if (ds.Tables[0].Rows.Count > 0)
-            {
-                GridViewOrders.DataSource = ds;
-                GridViewOrders.DataBind();
-                pnlNoOrders.Visible = false;
-                GridViewOrders.Visible = true;
-            }
-            else
-            {
-                pnlNoOrders.Visible = true;
-                GridViewOrders.Visible = false;
-            }
+            gvMyOrders.DataSource = ds;
+            gvMyOrders.DataBind();
             con.Close();
         }
 
-        // Saves updated user profile details
+        // Update user profile
         protected void btnUpdateProfile_Click(object sender, EventArgs e)
         {
             if (txtname.Text == "")
@@ -163,7 +157,7 @@ namespace The_Cake_Atelier
             lblProfileMsg.Visible = true;
         }
 
-        // Changes user password after verifying the old password
+        // Change password
         protected void btnChangePassword_Click(object sender, EventArgs e)
         {
             if (txtOldPwd.Text == "" || txtNewPwd.Text == "" || txtConfirmPwd.Text == "")
@@ -212,7 +206,7 @@ namespace The_Cake_Atelier
             }
         }
 
-        // Inserts a customer review into tbl_reviews
+        // Submit cake review
         protected void btnSubmitReview_Click(object sender, EventArgs e)
         {
             if (txtReviewComment.Text == "")

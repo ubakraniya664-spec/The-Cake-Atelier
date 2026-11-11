@@ -168,6 +168,15 @@ namespace The_Cake_Atelier
         protected global::System.Web.UI.WebControls.DropDownList ddlCity;
 
         /// <summary>
+        /// gvMyOrders control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvMyOrders;
+
+        /// <summary>
         /// txtmobile control.
         /// </summary>
         /// <remarks>
@@ -283,23 +292,5 @@ namespace The_Cake_Atelier
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSubmitReview;
-
-        /// <summary>
-        /// pnlNoOrders control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlNoOrders;
-
-        /// <summary>
-        /// GridViewOrders control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridViewOrders;
     }
 }

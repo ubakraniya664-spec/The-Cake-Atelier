@@ -4,6 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+    <meta charset="utf-8" />
     <title>Customer Registration - The Cake Atelier</title>
     <link href="Style.css" rel="stylesheet" type="text/css" />
 </head>
@@ -31,14 +32,14 @@
             </table>
         </div>
 
-        <!-- Main Registration Form (Strictly Mimicking Reference_Code register.aspx) -->
+        <!-- Customer Registration Form -->
         <div class="reg-card">
             <div style="text-align:center;">
                 <div style="font-size:42px;">&#127856;</div>
                 <h1 style="color:#4a2c1b; margin:0 0 6px 0; font-size:26px;">Customer Registration</h1>
                 <p style="color:#7d5e4b; font-size:14px; margin-bottom:15px;">Create your member account to order fresh cakes</p>
                 
-                <!-- Status message label (mimicking Label8 in reference code) -->
+                <!-- Status message label -->
                 <asp:Label ID="Label8" runat="server" Visible="false" CssClass="alert-box"></asp:Label>
             </div>
 

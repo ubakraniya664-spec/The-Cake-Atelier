@@ -4,6 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+    <meta charset="utf-8" />
     <title>Registered Users - Bakery Admin</title>
     <link href="../Style.css" rel="stylesheet" type="text/css" />
 </head>
@@ -47,7 +48,7 @@
             <!-- Status Alert Message -->
             <asp:Label ID="lblMsg" runat="server" Visible="false"></asp:Label>
 
-            <!-- ASP:GRIDVIEW - DISPLAYING ALL REGISTERED USERS -->
+            <!-- Registered Users GridView -->
             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CssClass="grid-view-table" OnRowCommand="GridView1_RowCommand">
                 <Columns>
                     <asp:TemplateField HeaderText="ID" ItemStyle-Width="40px">

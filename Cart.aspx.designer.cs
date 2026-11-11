@@ -105,138 +105,84 @@ namespace The_Cake_Atelier
         protected global::System.Web.UI.WebControls.LinkButton lnkLogout;
 
         /// <summary>
-        /// pnlEmptyCart control.
+        /// lblMsg control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlEmptyCart;
+        protected global::System.Web.UI.WebControls.Label lblMsg;
 
         /// <summary>
-        /// btnBrowse control.
+        /// lblEditCake control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink btnBrowse;
+        protected global::System.Web.UI.WebControls.Label lblEditCake;
 
         /// <summary>
-        /// pnlOrderSuccess control.
+        /// ddlEditQunty control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlOrderSuccess;
+        protected global::System.Web.UI.WebControls.DropDownList ddlEditQunty;
 
         /// <summary>
-        /// lblConfirmedOrderId control.
+        /// btnUpdateCart control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblConfirmedOrderId;
+        protected global::System.Web.UI.WebControls.Button btnUpdateCart;
 
         /// <summary>
-        /// lnkBackHome control.
+        /// btnCancelEdit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink lnkBackHome;
+        protected global::System.Web.UI.WebControls.Button btnCancelEdit;
 
         /// <summary>
-        /// pnlActiveCart control.
+        /// GridView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlActiveCart;
+        protected global::System.Web.UI.WebControls.GridView GridView1;
 
         /// <summary>
-        /// DataListCart control.
+        /// lblTotal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList DataListCart;
+        protected global::System.Web.UI.WebControls.Label lblTotal;
 
         /// <summary>
-        /// ddlQuantity control.
+        /// btnCheckout control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlQuantity;
+        protected global::System.Web.UI.WebControls.Button btnCheckout;
 
         /// <summary>
-        /// lblTotalPrice control.
+        /// lnkContinue control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTotalPrice;
-
-        /// <summary>
-        /// txtRecipient control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtRecipient;
-
-        /// <summary>
-        /// txtPhone control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPhone;
-
-        /// <summary>
-        /// txtAddress control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAddress;
-
-        /// <summary>
-        /// txtMessage control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMessage;
-
-        /// <summary>
-        /// lblCartError control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCartError;
-
-        /// <summary>
-        /// btnConfirmOrder control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnConfirmOrder;
+        protected global::System.Web.UI.WebControls.HyperLink lnkContinue;
     }
 }

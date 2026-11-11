@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -84,7 +84,7 @@ namespace The_Cake_Atelier
             // 2. Upload photo
             imageupload();
 
-            // 3. Simple Insert Query (Exactly like Reference Code)
+            // 3. Insert new user into database
             cmd = new SqlCommand("insert into tbl_users(Name, Gender, Email, Password, City, Address, Mobile, Image) values('" + txtname.Text + "', '" + rblg.SelectedItem.Text + "', '" + txtemail.Text + "', '" + txtpwd.Text + "', '" + DropDownList1.SelectedItem.Text + "', '" + txtaddress.Text + "', '" + txtmobile.Text + "', '" + img + "')", con);
             cmd.ExecuteNonQuery();
             con.Close();

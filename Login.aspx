@@ -4,6 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+    <meta charset="utf-8" />
     <title>Customer Login - The Cake Atelier</title>
     <link href="Style.css" rel="stylesheet" type="text/css" />
 </head>
@@ -31,7 +32,7 @@
             </table>
         </div>
 
-        <!-- Main Login Content Form (Strictly Mimicking Reference_Code login.aspx) -->
+        <!-- Member Login Form -->
         <div class="login-card">
             <div style="font-size:42px; margin-bottom:10px;">&#129473;</div>
             <h1 style="color:#4a2c1b; margin:0 0 6px 0; font-size:26px;">Member Login</h1>

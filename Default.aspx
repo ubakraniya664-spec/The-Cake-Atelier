@@ -4,6 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+    <meta charset="utf-8" />
     <title>The Cake Atelier - Artisanal Bakery & Cake Shop</title>
     <link href="Style.css" rel="stylesheet" type="text/css" />
 </head>
@@ -25,7 +26,7 @@
                         <asp:HyperLink ID="lnkContact" runat="server" NavigateUrl="Contact.aspx">Contact</asp:HyperLink>
                         <asp:HyperLink ID="lnkCart" runat="server" NavigateUrl="Cart.aspx">Cart</asp:HyperLink>
 
-                        <!-- Dynamic Session-Based Authentication Links -->
+                        <!-- Navigation Links -->
                         <asp:HyperLink ID="lnkLogin" runat="server" NavigateUrl="login.aspx">Login</asp:HyperLink>
                         <asp:HyperLink ID="lnkRegister" runat="server" NavigateUrl="register.aspx">Register</asp:HyperLink>
                         <asp:HyperLink ID="lnkDashboard" runat="server" NavigateUrl="User_Dashboard.aspx" Visible="false">Dashboard</asp:HyperLink>
@@ -53,33 +54,33 @@
         <!-- Main Content -->
         <div class="main-container">
 
-            <!-- Dynamic Featured Cakes (From Database via DataList) -->
+            <!-- Featured Cakes -->
             <h2 class="section-heading">Our Featured Cakes</h2>
             <div class="section-subheading">Customer-favorite recipes fetched directly from our bakery database</div>
 
-            <asp:DataList ID="DataListFeaturedCakes" runat="server" RepeatDirection="Horizontal" RepeatColumns="3" Width="100%" OnItemCommand="DataListFeaturedCakes_ItemCommand">
+            <asp:DataList ID="DataListFeaturedCakes" runat="server" RepeatDirection="Horizontal" RepeatColumns="3" Width="100%">
                 <ItemTemplate>
                     <div class="cake-card">
                         <asp:Image ID="imgCake" runat="server" ImageUrl='<%# Eval("Cake_Image") %>' CssClass="cake-img" AlternateText='<%# Eval("Cake_Name") %>' />
                         <div class="cake-title"><%# Eval("Cake_Name") %></div>
                         <div class="cake-desc"><%# Eval("Cake_Desc") %></div>
-                        <div class="cake-price">&#8377;<%# Eval("Cake_Price") %></div>
-                        <asp:Button ID="btnOrder" runat="server" Text="Order Now" CssClass="btn-order" CommandName="Order" CommandArgument='<%# Eval("Cake_Id") %>' />
+                        <div class="cake-price">₹<%# Eval("Cake_Price") %></div>
+                        <asp:HyperLink ID="lnkOrder" runat="server" CssClass="btn-order" Style="display: block; box-sizing: border-box; text-decoration: none;" NavigateUrl='<%# "Cart.aspx?pid=" + Eval("Cake_Id") %>'>Order Now</asp:HyperLink>
                     </div>
                 </ItemTemplate>
             </asp:DataList>
 
             <div style="text-align: center; margin-top: 25px;">
-                <asp:HyperLink ID="lnkAllCakes" runat="server" NavigateUrl="Cakes.aspx" CssClass="btn-secondary" style="font-size: 15px; padding: 12px 28px;">
+                <asp:HyperLink ID="lnkAllCakes" runat="server" NavigateUrl="Cakes.aspx" CssClass="btn-secondary" Style="font-size: 15px; padding: 12px 28px;">
                     View All Cakes in Catalog &rarr;
                 </asp:HyperLink>
             </div>
 
-            <!-- Dynamic Verified Reviews Section (From Database via DataList) -->
+            <!-- Customer Reviews -->
             <h2 class="section-heading" style="margin-top: 60px;">Customer Reviews &amp; Experiences</h2>
             <div class="section-subheading">Live reviews left by real registered members</div>
 
-            <div style="text-align:center;">
+            <div style="text-align: center;">
                 <asp:Label ID="lblNoReviews" runat="server" Text="No customer reviews yet. Be the first to order and review!" ForeColor="#7d5e4b" Font-Size="14px" Visible="false"></asp:Label>
             </div>
 

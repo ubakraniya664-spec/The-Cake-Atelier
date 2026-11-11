@@ -52,7 +52,19 @@ namespace The_Cake_Atelier.Admin
             con.Close();
         }
 
-        // Fills the edit form with selected cake's existing data
+        // Clear form inputs
+        void clear()
+        {
+            lblEditId.Text = "";
+            txtname.Text = "";
+            txtprice.Text = "";
+            txtdesc.Text = "";
+            dropcategory.ClearSelection();
+            droptype.ClearSelection();
+            ViewState["Edit_Id"] = null;
+        }
+
+        // Populate edit form with cake details
         void filldata(string id)
         {
             getCon();
@@ -62,37 +74,28 @@ namespace The_Cake_Atelier.Admin
 
             if (ds.Tables[0].Rows.Count > 0)
             {
-                lblEditId.Text = id;
+                lblEditId.Text = "(Editing ID #" + id + ")";
                 txtname.Text = ds.Tables[0].Rows[0]["Cake_Name"].ToString();
                 txtprice.Text = ds.Tables[0].Rows[0]["Cake_Price"].ToString();
                 txtdesc.Text = ds.Tables[0].Rows[0]["Cake_Desc"].ToString();
 
-                string cat = ds.Tables[0].Rows[0]["Cake_Category"].ToString();
                 dropcategory.ClearSelection();
-                if (dropcategory.Items.FindByText(cat) != null)
-                {
-                    dropcategory.Items.FindByText(cat).Selected = true;
-                }
+                dropcategory.SelectedValue = ds.Tables[0].Rows[0]["Cake_Category"].ToString();
 
-                string type = ds.Tables[0].Rows[0]["Cake_Type"].ToString();
                 droptype.ClearSelection();
-                if (droptype.Items.FindByText(type) != null)
-                {
-                    droptype.Items.FindByText(type).Selected = true;
-                }
+                droptype.SelectedValue = ds.Tables[0].Rows[0]["Cake_Type"].ToString();
             }
             con.Close();
         }
 
-        // Handles Edit & Delete commands (Strictly mimicking Reference_Code GridView1_RowCommand)
+        // Handle Edit and Delete commands from GridView
         protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
         {
             if (e.CommandName == "cmd_edt")
             {
                 string id = e.CommandArgument.ToString();
                 ViewState["Edit_Id"] = id;
-                filldata(id);
-                pnlEdit.Visible = true;
+                filldata(id); // Populates the form textboxes
                 lblMsg.Visible = false;
             }
             else if (e.CommandName == "cmd_del")
@@ -103,17 +106,25 @@ namespace The_Cake_Atelier.Admin
                 con.Close();
 
                 fillgrid();
+                clear();
 
-                lblMsg.Text = "&#10004; Cake deleted successfully!";
+                lblMsg.Text = "Cake deleted successfully!";
                 lblMsg.CssClass = "alert-box alert-success";
                 lblMsg.Visible = true;
-                pnlEdit.Visible = false;
             }
         }
 
-        // Saves updated cake details into tbl_cakes
+        // Update cake details in database
         protected void btnUpdate_Click(object sender, EventArgs e)
         {
+            if (ViewState["Edit_Id"] == null)
+            {
+                lblMsg.Text = "Please click 'Edit' on a cake from the table below first.";
+                lblMsg.CssClass = "alert-box alert-danger";
+                lblMsg.Visible = true;
+                return;
+            }
+
             if (txtname.Text != "" && txtprice.Text != "")
             {
                 getCon();
@@ -121,18 +132,20 @@ namespace The_Cake_Atelier.Admin
                 cmd.ExecuteNonQuery();
                 con.Close();
 
+                clear();
                 fillgrid();
-                pnlEdit.Visible = false;
 
-                lblMsg.Text = "&#10004; Cake updated successfully!";
+                lblMsg.Text = "Cake updated successfully!";
                 lblMsg.CssClass = "alert-box alert-success";
                 lblMsg.Visible = true;
             }
         }
 
+        // Resets the form fields
         protected void btnCancel_Click(object sender, EventArgs e)
         {
-            pnlEdit.Visible = false;
+            clear();
+            lblMsg.Visible = false;
         }
 
         protected void lnkLogout_Click(object sender, EventArgs e)

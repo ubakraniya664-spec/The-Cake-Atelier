@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -19,7 +19,7 @@ namespace The_Cake_Atelier.Admin
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            // Session protection: Only logged-in admin can access
+            // Check admin session
             if (Session["admin"] == null)
             {
                 Response.Redirect("Admin_Login.aspx");
@@ -40,7 +40,7 @@ namespace The_Cake_Atelier.Admin
             con.Open();
         }
 
-        // Calculates live summary statistics from SQL Server
+        // Load dashboard statistics
         void loadDashboardStats()
         {
             getCon();
@@ -49,7 +49,7 @@ namespace The_Cake_Atelier.Admin
             cmd = new SqlCommand("select count(*) from tbl_cakes", con);
             lblTotalCakes.Text = cmd.ExecuteScalar().ToString();
 
-            // 2. Total Orders Placed
+            // 2. Total Customer Orders
             cmd = new SqlCommand("select count(*) from tbl_orders", con);
             lblTotalOrders.Text = cmd.ExecuteScalar().ToString();
 
@@ -57,9 +57,16 @@ namespace The_Cake_Atelier.Admin
             cmd = new SqlCommand("select count(*) from tbl_users", con);
             lblTotalUsers.Text = cmd.ExecuteScalar().ToString();
 
-            // 4. Total Sales Revenue
-            cmd = new SqlCommand("select isnull(sum(Total_Price), 0) from tbl_orders", con);
-            lblTotalRevenue.Text = cmd.ExecuteScalar().ToString();
+            // 4. Total Revenue from Orders
+            SqlDataAdapter daRev = new SqlDataAdapter("select total_amount from tbl_orders where payment_status != 'Cancelled'", con);
+            DataSet dsRev = new DataSet();
+            daRev.Fill(dsRev);
+            int revenue = 0;
+            for (int i = 0; i < dsRev.Tables[0].Rows.Count; i++)
+            {
+                revenue += Convert.ToInt32(dsRev.Tables[0].Rows[i]["total_amount"]);
+            }
+            lblTotalRevenue.Text = revenue.ToString();
 
             con.Close();
         }

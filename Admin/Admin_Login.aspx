@@ -4,6 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+    <meta charset="utf-8" />
     <title>Bakery Staff Portal - The Cake Atelier</title>
     <link href="../Style.css" rel="stylesheet" type="text/css" />
 </head>

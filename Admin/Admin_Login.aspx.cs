@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -32,7 +32,7 @@ namespace The_Cake_Atelier.Admin
             con.Open();
         }
 
-        // Authenticates admin and stores Username in Session["admin"]
+        // Validate admin login credentials
         protected void btnLogin_Click(object sender, EventArgs e)
         {
             if (txtadminemail.Text != "" && txtadminpwd.Text != "")
@@ -45,7 +45,7 @@ namespace The_Cake_Atelier.Admin
 
                 if (ds.Tables[0].Rows.Count > 0)
                 {
-                    // Always store the Admin Username for the header
+                    // Store admin session
                     Session["admin"] = ds.Tables[0].Rows[0]["Username"].ToString();
                     Response.Redirect("Dashboard.aspx");
                 }
